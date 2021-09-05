@@ -6,8 +6,20 @@ a_name=input("Please enter your name: ")
 print(f"Hello {a_name} ! Welcome to our Shopping Store. Buy Products at Discounted & Cheapest Rate !!")
 
 def addInventory():
-    pass
-    
+    with open("record.json","r") as fr:
+       r = fr.read()
+       price_dict = json.loads(r)
+       prod_id = str(input("Enter product id:"))
+       name = str(input("Enter name:"))
+       pr = int(input("Enter price:"))
+       qn = int(input("Enter quantity:"))
+       price_dict[prod_id] = {'name': name, 'pr': pr, 'qn': qn}
+       js = json.dumps(price_dict)
+       with open("record.json","w") as fw:
+           fw.write(js)
+    print(f"Product ID - {prod_id} : {name} added to Stock Records !!")
+
+
 def complain():
     pass
 
@@ -25,17 +37,26 @@ def itemPurchase():
     i = 0
     num_items = 100
     ls_items = []
+    ls_quan = []
+    ls_price = []
+    ls_total = []
     while(num_items > 0):
         print("========================================================================================")
         item = input("Enter one item that you wish to Purchase: ")
         x = item.capitalize()
         quan = int(input("Enter the quantity of Product: "))
-        print("Product: ", price_dict[x]['name'])
-        print("Price: ", price_dict[x]['pr'])
-        print("Billing Amount: ", price_dict[x]['pr'] * quan)
+        ls_prod = price_dict[x]['name']
+        ls_pr = price_dict[x]['pr']
+        ls_bill = price_dict[x]['pr'] * quan
+        print("Product: ", ls_prod)
+        print("Price: ", ls_pr)
+        print("Billing Amount: ", ls_bill)
         if(x in price_dict):
             bill = bill + price_dict[x]['pr'] * quan
-            ls_items.append(x)
+            ls_items.append(str(x))
+            ls_quan.append(str(quan))
+            ls_price.append(str(ls_pr))
+            ls_total.append(str(ls_bill))
             num_items += 1
             i += 1
             price_dict[x]["qn"] = price_dict[x]["qn"] - quan
@@ -88,9 +109,14 @@ def itemPurchase():
         file.write(f" Invoice No: {invoice}      Date: {d}     Time: {e}\n")
         file.write(f" Name of Customer: {str(a_name)}\n")
         file.write("=============================================================\n")
-        file.write(" PARTICULAR           QUANTITY           PRICE        TOTAL\n")                     
+        file.write(" PARTICULAR           QUANTITY         PRICE        TOTAL\n")                     
         file.write("-------------------------------------------------------------\n")
-        file.write(f"{price_dict[x]['name']}                 {quan}                 {price_dict[x]['pr']}           {quan*price_dict[x]['pr']}\n")
+        for u in range(len(ls_items)):
+            i = ls_items[u]
+            j = ls_quan[u]
+            p = ls_price[u]
+            l = ls_total[u]
+            file.write(f"   {i}                  {j}              {p}          {l}    \n")
         file.write("-------------------------------------------------------------\n")
         file.write(f"\n		     	Your Billing amount: {str(bill)}")
         file.write("\n-------------------------------------------------------------")
@@ -114,7 +140,7 @@ def itemPurchase():
     
 
 print("========================================================================================")
-print(f"======================= WELCOME {a_name} TO THE SHOPPING CART =============================")
+print(f"======================= WELCOME {a_name} TO THE SHOPPING CART ==========================")
 print("=========================== Do Visit us At @shopcart.com ===============================")
 print("========================================================================================")
 

@@ -1,19 +1,21 @@
 =============================================================
  SHOPPING CART                                     INVOICE
- Invoice No: 2021-9-4-1-14-49      Date: 2021-9-4     Time: 1:14:49
+ Invoice No: 2021-9-6-0-9-13      Date: 2021-9-6     Time: 0:9:13
  Name of Customer: Parth Shah
 =============================================================
- PARTICULAR           QUANTITY           PRICE        TOTAL
+ PARTICULAR           QUANTITY         PRICE        TOTAL
 -------------------------------------------------------------
-Milk Cake                 5                 800           4000
+   1002                  2              800          1600    
+   1008                  1              599          599    
+   1007                  1              1500          1500    
 -------------------------------------------------------------
 
-		     	Your Billing amount: 4000
+		     	Your Billing amount: 3699
 -------------------------------------------------------------
-   		      Your 10.0% discounted amount is: 400.0
+   		      Your 10.0% discounted amount is: 369.9
 -------------------------------------------------------------
-		    	 Your payable amount is: 3600.0
+		    	 Your payable amount is: 3329.1
 -------------------------------------------------------------
-	          Thank You Parth Shah for your shopping.
+	          Thank You Parth Shah for shopping.
 	                	See you again!
 =============================================================
