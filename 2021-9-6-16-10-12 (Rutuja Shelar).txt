@@ -1,21 +1,20 @@
 =============================================================
  SHOPPING CART                                     INVOICE
- Invoice No: 2021-9-6-0-9-13      Date: 2021-9-6     Time: 0:9:13
- Name of Customer: Parth Shah
+ Invoice No: 2021-9-6-16-10-12      Date: 2021-9-6     Time: 16:10:12
+ Name of Customer: Rutuja Shelar     Mobile No - 987654321
 =============================================================
  PARTICULAR           QUANTITY         PRICE        TOTAL
 -------------------------------------------------------------
-   1002                  2              800          1600    
-   1008                  1              599          599    
-   1007                  1              1500          1500    
+   KitKat                  5              20          100    
+   Sauce                  1              35          35    
 -------------------------------------------------------------
 
-		     	Your Billing amount: 3699
+		     	Your Billing amount: 135
 -------------------------------------------------------------
-   		      Your 10.0% discounted amount is: 369.9
+   		      Your 5.0% discounted amount is: 6.75
 -------------------------------------------------------------
-		    	 Your payable amount is: 3329.1
+		    	 Your payable amount is: 128.25
 -------------------------------------------------------------
-	          Thank You Parth Shah for shopping.
+	          Thank You Rutuja Shelar for shopping.
 	                	See you again!
 =============================================================
