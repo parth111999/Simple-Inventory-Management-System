@@ -24,4 +24,4 @@ Simple Inventory Management System based on JSON file handling, built using Pyth
  
 
 ### Credits
-**©** @parth111999 :octocat: | 2021 | [LinkedIn](https://www.linkedin.com/in/parth-shah-42060b169/) | [Instagram](https://www.instagram.com/parth111999)
+**©** @parth111999 :octocat: | 2021 | [Portfolio](https://main.dlc0ul4lwlitz.amplifyapp.com/) | [LinkedIn](https://www.linkedin.com/in/parth-shah-42060b169/) | [Instagram](https://www.instagram.com/parth111999)
